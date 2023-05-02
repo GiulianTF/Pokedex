@@ -66,47 +66,47 @@ export default function PokemonPage({ pokemon }) {
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-5 card">
-            <div class="card-body">
-              <img src={image} width='400' height='400'></img>
-            </div>
-          </div>
-          <div class="col-7 card">
-            <div class="card-body">
-              {
-                pokemon.abilities.map((item) => (
-                  <h1>
-                    {item.ability.name}
-                  </h1>
-                ))
-              }
-            </div>
-          </div>
-          <div class="col card">
-            <div class="card-body">
-              <strong>Status</strong>
-              {
-                pokemon.stats.map((item) => (
-                  <h1>
-                    {item.stat.name}: {item.base_stat}
-                  </h1>
-                ))
-              }
-            </div>
-          </div>
-          <div class="col card">
-            <div class="card-body">
-              <strong>Tipo</strong>
+        <div class="card">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col-5  justify-content-center">
+                <img src={image} width='400' height='400'></img>
+              </div>
+              <div class="col-7 card">
+                <div class="card-body">
+                  {
+                    pokemon.abilities.map((item) => (
+                      <h1>
+                        {item.ability.name}
+                      </h1>
+                    ))
+                  }
+                </div>
+                <hr></hr>
+                <div class="card-body">
+                  <strong>Status</strong>
+                  {
+                    pokemon.stats.map((item) => (
+                      <h1>
+                        {item.stat.name}: {item.base_stat}
+                      </h1>
+                    ))
+                  }
+                </div>
+                <hr></hr>
+                <div class="card-body">
+                  <strong>Tipo</strong>
 
 
-              {
-                pokemon.types.map((item) => (
-                  <h1>
-                    {item.type.name}
-                  </h1>
-                ))
-              }
+                  {
+                    pokemon.types.map((item) => (
+                      <h1>
+                        {item.type.name}
+                      </h1>
+                    ))
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function PokemonPage({ pokemon }) {
             <a href={`/pokemon/${pokemon.id - 1}`}><button type='button' class='btn btn-primary'>Anterior</button></a>
           </div>
           <div class='col-6'>
-          <a href={`../`}><button type='button' class='btn btn-primary'>Inicio</button></a>
+            <a href={`../`}><button type='button' class='btn btn-primary'>Inicio</button></a>
           </div>
           <div class=" col-1 justify-content-end">
             <a href={`/pokemon/${pokemon.id + 1}`}><button type='button' class='btn btn-primary'>Proximo</button></a>
